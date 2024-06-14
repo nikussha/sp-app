@@ -1,0 +1,89 @@
+@import '/src/app/styles/abstracts/variables';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+// Importing variables
+
+.wrapper {
+   
+
+  padding: 20px;
+
+    mat-form-field {
+            width: 600px;
+            height: 50px;
+            input{
+                width: 100%;
+            }
+        }
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.article-card {
+    width: $card-width;
+    height: $card-height;
+    border: $card-border solid $card-border-color;
+    border-radius: $card-radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    .card-img-top {
+        height: $card-img-height; 
+        object-fit: cover; 
+    }
+
+    mat-card-title {
+        font-family: 'Montserrat', sans-serif;
+        width: $card-title-width;
+        top:$card-title-top;
+        font-size: $card-title-font;
+        font-weight: $card-title-weight;
+        line-height: $card-title-line;
+        color: $card-title-font-color;
+
+    }
+
+
+    mat-card-content{
+        font-size: $card-summary-size;
+        width: $card-summary-width;
+        color: $card-summary-font-color;
+        line-height: $card-summary-line;
+        font-family: 'Montserrat', sans-serif;
+        height:96px;
+        
+    }
+
+mat-card-subtitle{
+    width: $card-summary-width;
+    font-size: $card-summary-size;
+    line-height: $card-summary-line;
+    color:$card-summary-font-color;
+    font-family: 'Montserrat', sans-serif;
+    opacity:0.6;
+
+
+}
+
+button{
+    margin-top: 100px;
+    align-items: start;
+}
+
+.results{
+  width:1290px;
+}
+}

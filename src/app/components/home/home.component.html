@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <section class="search-container">
+    <mat-form-field appearance="fill" class="input">
+      <mat-label>Search</mat-label>
+      <input
+        matInput
+        [formControl]="searchControl"
+        placeholder="Enter keywords"
+      />
+    </mat-form-field>
+  </section>
+  <div class="results">
+    <span>Results</span>
+    - {{ result }}
+  </div>
+  <section class="content-container">
+    <ng-container *ngIf="articles$ | async as articles">
+      <mat-card class="article-card" *ngFor="let article of articles">
+        <img
+          mat-card-image
+          [src]="article.image_url"
+          class="card-img-top"
+          alt="Article image"
+        />
+        <mat-card-subtitle>
+          <mat-icon>event</mat-icon> {{ article.published_at }}
+        </mat-card-subtitle>
+        <mat-card-title [innerHTML]="article.title"></mat-card-title>
+        <mat-card-content [innerHTML]="article.summary"> </mat-card-content>
+        <div class="button-wrapper">
+          <button mat-button [routerLink]="['/articles', article.id]">
+            Read more
+          </button>
+        </div>
+      </mat-card>
+    </ng-container>
+  </section>
+</div>
